@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grow a Money Tree — Offer Field Notes</title>
+<meta name="description" content="A one-page reminder for making offers the market already wants, distilled from Myron Golden's 'Just Grow a Money Tree.'">
+<style>
+  :root{
+    --paper:#f2ecdf;
+    --paper-2:#e9e0cf;
+    --ink:#17251d;
+    --forest:#1d3a2c;
+    --forest-2:#244a38;
+    --moss:#58705a;
+    --fruit:#bd5f2d;
+    --sun:#d9a441;
+    --cream:#fbf6ea;
+    --line:rgba(23,37,29,.18);
+    --line-light:rgba(251,246,234,.22);
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background-color:var(--paper);
+    background-image:radial-gradient(rgba(23,37,29,.045) .55px, transparent .55px);
+    background-size:4px 4px;
+    color:var(--ink);
+    font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  img{max-width:100%}
+  a{color:inherit}
+
+  .wrap{max-width:1180px;margin:0 auto;padding:0 34px}
+
+  /* ---------- masthead ---------- */
+  .masthead{padding-top:26px}
+  .topline{
+    display:flex;justify-content:space-between;gap:20px;
+    padding-bottom:13px;border-bottom:1px solid var(--line);
+    font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#5a6658;
+  }
+  .topline b{font-weight:500;color:var(--ink)}
+  .hero{
+    display:grid;grid-template-columns:1.22fr .78fr;gap:56px;
+    align-items:end;padding:54px 0 72px;
+  }
+  .kicker{
+    margin:0 0 22px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--fruit);font-weight:600;
+  }
+  .kicker span{display:inline-block;width:26px;height:1px;background:var(--fruit);vertical-align:middle;margin-right:10px}
+  h1{
+    margin:0;font-family:var(--serif);font-weight:400;
+    font-size:clamp(64px,9.4vw,132px);line-height:.86;letter-spacing:-.045em;
+  }
+  h1 em{font-style:italic;color:var(--fruit)}
+  .deck{
+    margin:28px 0 0;max-width:46ch;font-size:18px;line-height:1.55;color:#3d4b40;
+  }
+  .source{
+    margin:28px 0 0;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#6b7567;
+  }
+  .source a{color:var(--fruit);text-decoration:none;border-bottom:1px solid rgba(189,95,45,.35);padding-bottom:2px}
+  .source a:hover{border-bottom-color:var(--fruit)}
+
+  .portrait{position:relative;margin:0}
+  .portrait-frame{position:relative}
+  .portrait-frame::before{
+    content:"";position:absolute;inset:14px -14px -14px 14px;
+    background:var(--fruit);z-index:0;
+  }
+  .portrait-frame img{
+    position:relative;z-index:1;display:block;width:100%;aspect-ratio:620/680;
+    object-fit:cover;border:1px solid rgba(23,37,29,.35);
+    filter:saturate(.88) contrast(1.03);
+  }
+  .portrait figcaption{
+    display:flex;justify-content:space-between;gap:12px;
+    margin-top:22px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#465447;
+  }
+
+  /* ---------- creed ---------- */
+  .creed{background:var(--forest);color:var(--cream);position:relative;overflow:hidden}
+  .creed::after{
+    content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(251,246,234,.10);
+    border-radius:50%;right:-160px;top:-210px;
+  }
+  .creed .wrap{padding-top:78px;padding-bottom:70px;position:relative;z-index:1}
+  .creed-label{
+    margin:0 0 32px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--sun);
+  }
+  .creed blockquote{
+    margin:0;max-width:1000px;font-family:var(--serif);font-weight:400;
+    font-size:clamp(30px,4.3vw,54px);line-height:1.1;letter-spacing:-.02em;
+  }
+  .creed blockquote em{color:var(--sun);font-style:italic}
+  .creed-note{
+    margin:34px 0 0;max-width:52ch;font-size:14px;line-height:1.65;color:rgba(251,246,234,.66);
+  }
+  .system-row{
+    display:flex;flex-wrap:wrap;gap:10px;margin-top:54px;padding-top:20px;
+    border-top:1px solid var(--line-light);
+  }
+  .system-row span{
+    font-size:9px;letter-spacing:.18em;text-transform:uppercase;
+    border:1px solid var(--line-light);border-radius:999px;padding:7px 13px;color:rgba(251,246,234,.8);
+  }
+  .system-row span b{color:var(--sun);font-weight:500;margin-right:7px}
+
+  /* ---------- sections ---------- */
+  .section{padding:96px 0;border-top:1px solid var(--line)}
+  .sec-head{display:grid;grid-template-columns:70px 1fr .82fr;gap:34px;align-items:start}
+  .sec-no{
+    font-family:var(--mono);font-size:11px;color:var(--fruit);letter-spacing:.08em;padding-top:12px;
+  }
+  .eyebrow{
+    margin:0 0 12px;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:#6b7567;
+  }
+  h2{
+    margin:0;font-family:var(--serif);font-weight:400;
+    font-size:clamp(36px,4.9vw,62px);line-height:.97;letter-spacing:-.03em;
+  }
+  .sec-deck{
+    margin:4px 0 0;font-size:15px;line-height:1.65;color:#4a574c;max-width:40ch;
+  }
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:52px}
+  .body p{margin:0 0 18px;font-size:16px;line-height:1.72;color:#37453a}
+  .body p:last-child{margin-bottom:0}
+  .lede{font-size:18px!important;line-height:1.6!important;color:var(--ink)!important}
+
+  .rules{list-style:none;margin:28px 0 0;padding:0}
+  .rules li{
+    display:grid;grid-template-columns:92px 1fr;gap:16px;
+    padding:15px 0;border-top:1px solid var(--line);font-size:14px;line-height:1.55;color:#3d4b40;
+  }
+  .rules strong{
+    font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--fruit);
+    font-weight:600;padding-top:4px;
+  }
+
+  .pull{
+    margin:30px 0 0!important;padding-left:18px;border-left:2px solid var(--fruit);
+    font-family:var(--serif);font-size:22px!important;line-height:1.35!important;font-style:italic;
+    color:var(--ink)!important;
+  }
+  .micro{
+    margin:24px 0 0!important;padding-left:16px;border-left:2px solid var(--fruit);
+    font-family:var(--serif);font-size:19px!important;line-height:1.4!important;
+    font-style:italic;color:var(--fruit)!important;
+  }
+
+  figure.fig{margin:0}
+  figure.fig img{
+    display:block;width:100%;border:1px solid rgba(23,37,29,.35);
+    background:#191919;box-shadow:0 14px 30px rgba(23,37,29,.10);
+  }
+  figure.fig figcaption{
+    display:flex;justify-content:space-between;gap:14px;align-items:baseline;
+    margin-top:10px;padding-top:9px;border-top:1px solid var(--line);
+    font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#667263;
+  }
+  .ts{
+    color:var(--fruit);text-decoration:none;border-bottom:1px solid rgba(189,95,45,.3);
+    white-space:nowrap;letter-spacing:.08em;
+  }
+  .ts:hover{border-bottom-color:var(--fruit)}
+
+  /* ---------- value triad ---------- */
+  .value{background:var(--paper-2);border-top:1px solid var(--line)}
+  .value .wrap{padding-top:92px;padding-bottom:88px}
+  .value .sec-deck{max-width:52ch}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);margin-top:52px;border-top:1px solid var(--line)}
+  .card{padding:26px 30px 10px 0;border-right:1px solid var(--line)}
+  .card:last-child{border-right:0;padding-right:0}
+  .card-no{
+    font-family:var(--serif);font-size:56px;line-height:1;color:var(--fruit);opacity:.9;
+  }
+  .card-label{
+    margin:16px 0 8px;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#6b7567;
+  }
+  .card h3{
+    margin:0 0 12px;font-family:var(--serif);font-weight:400;font-size:23px;line-height:1.12;letter-spacing:-.01em;
+  }
+  .card h3 em{font-style:normal;color:var(--fruit)}
+  .card p{margin:0;font-size:14px;line-height:1.65;color:#40503f}
+  .card .prompt{
+    margin-top:18px;font-size:11px;line-height:1.5;color:var(--fruit);
+    letter-spacing:.02em;font-style:italic;
+  }
+  .value-foot{
+    display:flex;justify-content:space-between;gap:24px;align-items:baseline;
+    margin-top:46px;padding-top:16px;border-top:1px solid var(--line);
+    font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#667263;
+  }
+  .value-foot b{color:var(--ink);font-weight:500}
+
+  /* ---------- unseen ---------- */
+  .unseen{padding-bottom:0}
+  .unseen figure{margin:46px 0 0}
+  .unseen figure img{
+    display:block;width:100%;border:1px solid rgba(23,37,29,.35);
+    filter:contrast(1.04);
+  }
+  .unseen figcaption{
+    display:flex;justify-content:space-between;gap:14px;
+    padding-top:9px;border-top:1px solid var(--line);margin-top:10px;
+    font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#667263;
+  }
+  .quote-row{
+    display:grid;grid-template-columns:1.25fr .75fr;gap:54px;
+    padding:42px 0 92px;margin-top:42px;border-top:1px solid var(--line);
+  }
+  .quote-row .q{
+    margin:0;font-family:var(--serif);font-size:clamp(24px,3vw,36px);
+    line-height:1.18;letter-spacing:-.015em;
+  }
+  .quote-row .q em{color:var(--fruit);font-style:italic}
+  .quote-row .q-meta{margin:0;font-size:13px;line-height:1.7;color:#526052;align-self:end}
+
+  /* ---------- fruit ---------- */
+  .fruit{background:var(--forest);color:var(--cream);border-top:0}
+  .fruit .wrap{padding-top:92px;padding-bottom:92px}
+  .fruit .sec-no{color:var(--sun)}
+  .fruit .eyebrow{color:rgba(251,246,234,.55)}
+  .fruit .sec-deck{color:rgba(251,246,234,.68)}
+  .fruit .lede{color:var(--cream)!important}
+  .fruit .body p{color:rgba(251,246,234,.72)}
+  .fruit .pull{
+    color:var(--cream)!important;border-left-color:var(--sun);
+  }
+  .fruit-intro{display:grid;grid-template-columns:1.15fr .85fr;gap:62px;margin-top:36px;align-items:start}
+  .fruit-aside{padding-left:22px;border-left:1px solid var(--line-light)}
+  .fruit-aside .aside-label{
+    margin:0 0 14px;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--sun);
+  }
+  .fruit-aside .aside-q{
+    margin:0;font-family:var(--serif);font-size:23px;line-height:1.25;color:var(--cream);
+  }
+  .fruit-aside .aside-note{margin:16px 0 0;font-size:12px;line-height:1.7;color:rgba(251,246,234,.6)}
+  .fruit-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;margin-top:48px;align-items:start}
+  .fruit-grid figure{margin:0}
+  .fruit-grid img{
+    display:block;width:100%;border:1px solid var(--line-light);
+    filter:saturate(.95) contrast(1.02);
+  }
+  .fruit-grid figcaption{
+    display:flex;justify-content:space-between;gap:12px;margin-top:9px;
+    font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(251,246,234,.5);
+  }
+  .fruit-grid .ts{color:var(--sun);border-bottom-color:rgba(217,164,65,.35)}
+  .fruit .quote{
+    margin:54px 0 0;padding-top:30px;border-top:1px solid var(--line-light);
+    font-family:var(--serif);font-size:clamp(28px,3.8vw,46px);line-height:1.1;
+    letter-spacing:-.02em;max-width:960px;
+  }
+  .fruit .quote em{color:var(--sun);font-style:italic}
+
+  /* ---------- maxims ---------- */
+  .maxims{padding:96px 0;border-top:1px solid var(--line)}
+  .maxim-lead{
+    margin:46px 0 0;max-width:1040px;font-family:var(--serif);
+    font-size:clamp(28px,3.5vw,44px);line-height:1.15;letter-spacing:-.02em;
+  }
+  .maxim-lead em{color:var(--fruit);font-style:italic}
+  .maxim-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:0 58px;
+    margin-top:44px;border-top:1px solid var(--line);
+  }
+  .maxim-grid blockquote{margin:0;padding:20px 0 22px;border-bottom:1px solid var(--line)}
+  .maxim-grid p{margin:0;font-family:var(--serif);font-size:21px;line-height:1.28;letter-spacing:-.01em}
+  .maxim-grid p em{font-style:italic;color:var(--fruit)}
+  .maxim-grid footer{
+    display:flex;justify-content:space-between;gap:14px;align-items:baseline;
+    margin-top:10px;font-size:12px;line-height:1.4;color:#526052;
+  }
+  .maxim-grid footer .ts{font-size:9px;letter-spacing:.08em}
+
+  /* ---------- positioning ---------- */
+  .fig.wide{margin-top:46px}
+  .pos-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:52px;margin-top:46px;align-items:start}
+  .pos-list{list-style:none;margin:0;padding:0;counter-reset:pos}
+  .pos-list li{
+    counter-increment:pos;display:grid;grid-template-columns:34px 1fr;gap:14px;
+    padding:20px 0;border-top:1px solid var(--line);
+  }
+  .pos-list li::before{
+    content:"0" counter(pos);font-family:var(--mono);font-size:10px;color:var(--fruit);padding-top:4px;
+  }
+  .pos-list h3{
+    margin:0 0 6px;font-family:var(--serif);font-weight:400;font-size:21px;line-height:1.15;
+  }
+  .pos-list p{margin:0;font-size:13px;line-height:1.65;color:#526052}
+  .pos-list q{font-style:italic;color:var(--ink)}
+
+  .questions{
+    margin-top:30px;padding:22px 24px;background:rgba(23,37,29,.045);
+    border:1px solid var(--line);
+  }
+  .questions p{
+    margin:0 0 10px;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#6b7567;
+  }
+  .questions dl{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;margin:0}
+  .pos-grid .questions{margin-top:0}
+  .pos-grid .questions dl{grid-template-columns:1fr;gap:14px}
+  .questions dt{font-family:var(--serif);font-size:17px}
+  .questions dd{margin:2px 0 0;font-size:12px;line-height:1.5;color:#526052}
+
+  /* ---------- preflight ---------- */
+  .preflight{background:var(--forest-2);color:var(--cream);border-top:0}
+  .preflight .wrap{padding-top:88px;padding-bottom:84px}
+  .preflight .sec-no{color:var(--sun)}
+  .preflight .eyebrow{color:rgba(251,246,234,.55)}
+  .preflight .sec-deck{color:rgba(251,246,234,.68)}
+  .preflight h2{max-width:800px}
+  .checks{
+    display:grid;grid-template-columns:1fr 1fr;gap:0 46px;margin-top:44px;
+    border-top:1px solid var(--line-light);
+  }
+  .checks li{
+    display:grid;grid-template-columns:22px 1fr;gap:14px;align-items:start;
+    padding:17px 0;border-bottom:1px solid var(--line-light);
+    font-size:14px;line-height:1.55;color:rgba(251,246,234,.84);list-style:none;
+  }
+  .checks li span:first-child{
+    display:block;width:16px;height:16px;border:1px solid rgba(251,246,234,.45);margin-top:2px;
+  }
+  .checks li b{color:var(--sun);font-weight:500}
+  .checks-wrap{margin:0;padding:0}
+
+  .closing{
+    margin:56px 0 0;padding-top:34px;border-top:1px solid var(--line-light);
+    font-family:var(--serif);font-size:clamp(24px,3.1vw,38px);line-height:1.16;
+    letter-spacing:-.015em;max-width:980px;
+  }
+  .closing em{color:var(--sun);font-style:italic}
+
+  /* ---------- footer ---------- */
+  footer{padding:44px 0 56px}
+  .foot-grid{display:grid;grid-template-columns:1fr .9fr;gap:50px;align-items:start}
+  .foot-grid p{margin:0 0 10px;font-size:11px;line-height:1.7;color:#667263;max-width:62ch}
+  .foot-grid a{color:var(--fruit);text-decoration:none;border-bottom:1px solid rgba(189,95,45,.3)}
+  .foot-mark{
+    font-family:var(--serif);font-size:22px;line-height:1.1;color:var(--ink);text-align:right;
+  }
+  .foot-mark span{display:block;margin-top:8px;font-family:var(--sans);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#6b7567}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:960px){
+    .hero{grid-template-columns:1fr;gap:42px;padding-top:40px}
+    .portrait{max-width:430px}
+    .sec-head{grid-template-columns:52px 1fr;gap:20px}
+    .sec-deck{grid-column:2;margin-top:14px}
+    .value .sec-head{grid-template-columns:52px 1fr}
+    .split,.quote-row,.fruit-grid,.pos-grid,.maxim-grid{grid-template-columns:1fr;gap:38px}
+    .maxim-grid{gap:0}
+    .cards{grid-template-columns:1fr}
+    .fruit-intro{grid-template-columns:1fr;gap:34px}
+    .fruit-aside{padding-left:0;padding-top:22px;border-left:0;border-top:1px solid var(--line-light)}
+    .card{border-right:0;border-bottom:1px solid var(--line);padding:24px 0 28px}
+    .card:last-child{border-bottom:0}
+    .checks{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr}
+    .foot-mark{text-align:left}
+    .questions dl{grid-template-columns:1fr}
+  }
+  @media (max-width:600px){
+    .wrap{padding:0 20px}
+    h1{font-size:clamp(52px,16vw,78px)}
+    .hero{padding:34px 0 54px}
+    .deck{font-size:16px}
+    .section{padding:66px 0}
+    .value .wrap,.fruit .wrap,.preflight .wrap{padding-top:64px;padding-bottom:60px}
+    .sec-head{grid-template-columns:36px 1fr;gap:14px}
+    .sec-no{font-size:10px}
+    .rules li{grid-template-columns:78px 1fr}
+    .quote-row{padding-bottom:66px}
+    .topline{font-size:9px;letter-spacing:.13em}
+    .system-row span{font-size:8px}
+  }
+
+  @media print{
+    body{background:#fff}
+    .creed,.fruit,.preflight{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .section,.value,.fruit,.preflight,footer{page-break-inside:avoid}
+    .portrait::before{display:none}
+    a{text-decoration:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="topline">
+      <span><b>Offer field notes</b> — a one-page reminder</span>
+      <span>Vol. 01 · 2026</span>
+    </div>
+
+    <div class="hero">
+      <div>
+        <p class="kicker"><span></span>Notes from Myron Golden</p>
+        <h1>Grow a<br><em>money tree.</em></h1>
+        <p class="deck">A reminder for making offers the market already wants — before you build, price, or pitch them.</p>
+        <p class="source">From “Just Grow a Money Tree” · 53 min · <a href="https://youtu.be/vzyMoKSDDx8" target="_blank" rel="noopener">watch the source ↗</a></p>
+      </div>
+
+      <figure class="portrait">
+        <div class="portrait-frame">
+          <img src="assets/myron-portrait.jpg" alt="Myron Golden speaking to camera in a blue checked jacket">
+        </div>
+        <figcaption><span>Myron Golden</span><span>02:30</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</header>
+
+<section class="creed">
+  <div class="wrap">
+    <p class="creed-label">The one reframe</p>
+    <blockquote>“You don’t want to give the marketplace something of value. You want to give them <em>something they value.</em>”</blockquote>
+    <p class="creed-note">An offer is not a pitch. It is the fruit of a system rooted in a problem the market already feels. Money grows on money trees — systems that keep producing the same fruit.</p>
+    <div class="system-row" aria-label="The four systems">
+      <span><b>01</b>Taproot — their outcome</span>
+      <span><b>02</b>Root — the unseen work</span>
+      <span><b>03</b>Shoot — visible proof</span>
+      <span><b>04</b>Fruit — the offer</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="taproot">
+  <div class="wrap">
+    <header class="sec-head">
+      <div class="sec-no">01</div>
+      <div>
+        <p class="eyebrow">The taproot</p>
+        <h2>Start in their soil,<br>not your head.</h2>
+      </div>
+      <p class="sec-deck">Most people discover something they value, then spend all their energy trying to make the marketplace care. The taproot of an offer is the market’s desired outcome — observed in detail, then served by a mechanism.</p>
+    </header>
+
+    <div class="split">
+      <div class="body">
+        <p class="lede">“Something of value” is not enough. It has to be something <em>they</em> value.</p>
+        <p>A gardening guide can be genuinely valuable and still be worthless to someone who never intends to garden. Value is not intrinsic. It is a match between what you make and what they already want.</p>
+
+        <p class="micro">“Something can be of value and they don’t value it.”</p>
+
+        <ul class="rules">
+          <li><strong>Discover</strong>Ask 100 people: “What is the single biggest challenge you have in ___?” The answer you hear most is the market speaking.</li>
+          <li><strong>Observe</strong>Go deeper than the stated problem. Watch how they talk about it, what they have tried, and what they are afraid will not work.</li>
+          <li><strong>Build</strong>Create a mechanism designed to over-deliver on the outcome — not a collection of information, but a path to the result.</li>
+        </ul>
+
+        <p class="pull">The test: would they pay for it before you build it?</p>
+      </div>
+
+      <figure class="fig">
+        <img src="assets/tree-system.jpg" alt="Whiteboard drawing of a tree: roots growing down, a trunk and branches growing up, and the sun">
+        <figcaption>
+          <span>Roots before shoot. The structure of the offer.</span>
+          <a class="ts" href="https://youtu.be/vzyMoKSDDx8?t=1770" target="_blank" rel="noopener">29:30 ↗</a>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="value">
+  <div class="wrap">
+    <header class="sec-head">
+      <div class="sec-no">02</div>
+      <div>
+        <p class="eyebrow">The value triad</p>
+        <h2>Three places value<br>comes from.</h2>
+      </div>
+      <p class="sec-deck">People pursue what they value. Values are not random: they form around what was missing, what seems good now, and what they imagine is possible.</p>
+    </header>
+
+    <div class="cards">
+      <article class="card">
+        <div class="card-no">01</div>
+        <p class="card-label">Past</p>
+        <h3>Past perceived <em>voids</em> create present pursued <em>values.</em></h3>
+        <p>What did they never have, lose, or feel was withheld? The lack they remember becomes the desire they pursue now.</p>
+        <p class="prompt">Offer move: name the absence in their words.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-no">02</div>
+        <p class="card-label">Present</p>
+        <h3>Present perceived <em>virtues</em> create present pursued <em>values.</em></h3>
+        <p>What do they already believe is good? People will pay for what fits inside their current spending comfort zone — and resist what asks them to become someone else first.</p>
+        <p class="prompt">Offer move: meet the belief they already hold.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-no">03</div>
+        <p class="card-label">Future</p>
+        <h3>Future perceived <em>visions</em> create present pursued <em>values.</em></h3>
+        <p>What future are they trying to reach? When the outcome is clear enough, the right vehicle becomes an obvious purchase.</p>
+        <p class="prompt">Offer move: show the destination, then the vehicle.</p>
+      </article>
+    </div>
+
+    <div class="value-foot">
+      <span>Voids → Virtues → Visions</span>
+      <span><b>The offer is the vehicle.</b></span>
+    </div>
+  </div>
+</section>
+
+<section class="section unseen">
+  <div class="wrap">
+    <header class="sec-head">
+      <div class="sec-no">03</div>
+      <div>
+        <p class="eyebrow">The root system</p>
+        <h2>Down before up.</h2>
+      </div>
+      <p class="sec-deck">The tree is gravitropic: it grows toward gravity before it grows toward light. Down is dark, dirty, dense, and difficult — which is exactly why most offers skip it.</p>
+    </header>
+
+    <figure>
+      <img src="assets/roots-detail.jpg" alt="Close-up of a hand-drawn tree root system with the words dark, dense, dirty, difficult and gravitropic">
+      <figcaption>
+        <span>Roots before shoot. The work nobody sees.</span>
+        <a class="ts" href="https://youtu.be/vzyMoKSDDx8?t=1530" target="_blank" rel="noopener">25:30 ↗</a>
+      </figcaption>
+    </figure>
+
+    <div class="quote-row">
+      <p class="q">“Obsess over other people’s problems long enough to find an <em>elegant solution.</em>”</p>
+      <p class="q-meta">The root is provisional and pleasurable: it provides the energy for everything above ground. Skip it, and the visible part of the offer has nothing to stand on.</p>
+    </div>
+  </div>
+</section>
+
+<section class="fruit">
+  <div class="wrap">
+    <header class="sec-head">
+      <div class="sec-no">04</div>
+      <div>
+        <p class="eyebrow">The fruit</p>
+        <h2>Build for the next tree.</h2>
+      </div>
+      <p class="sec-deck">Fruit is a living thing whose seed is in itself. A delivered offer should create the next opportunity — proof, referral, repeat, product — not exhaust the tree.</p>
+    </header>
+
+    <div class="fruit-intro">
+      <div class="body">
+        <p class="lede">Consumption never creates lack. Consumption creates the opportunity for production.</p>
+        <p>When an apple is eaten, the seeds are exposed. Plant one and you do not get an apple; you get an entire new tree. Design the offer so that delivering it leaves behind the raw material for the next one.</p>
+        <p class="pull">A great offer is an asset that keeps producing after the transaction ends.</p>
+      </div>
+      <aside class="fruit-aside">
+        <p class="aside-label">The seed test</p>
+        <p class="aside-q">If this offer disappeared tomorrow, what would still be producing?</p>
+        <p class="aside-note">A book, course, template, or system can be delivered again without replanting the whole tree. Build the asset, not only the transaction.</p>
+      </aside>
+    </div>
+
+    <div class="fruit-grid">
+      <figure>
+        <img src="assets/tree-fruit.jpg" alt="The completed whiteboard money tree with orange fruit on its branches">
+        <figcaption><span>The tree, in fruit</span><a class="ts" href="https://youtu.be/vzyMoKSDDx8?t=2070" target="_blank" rel="noopener">34:30 ↗</a></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/book.jpg" alt="Myron Golden holding up a book, one of his long-producing money trees">
+        <figcaption><span>A money tree, 20 years in fruit</span><a class="ts" href="https://youtu.be/vzyMoKSDDx8?t=2920" target="_blank" rel="noopener">48:40 ↗</a></figcaption>
+      </figure>
+    </div>
+
+    <p class="quote">“The purpose of the production of the tree is <em>not for itself.</em>”</p>
+  </div>
+</section>
+
+<section class="maxims">
+  <div class="wrap">
+    <header class="sec-head">
+      <div class="sec-no">✦</div>
+      <div>
+        <p class="eyebrow">The pithy bits</p>
+        <h2>Short lines,<br>heavy lifting.</h2>
+      </div>
+      <p class="sec-deck">The best offer advice in the talk arrives as one-liners. Keep these where you can see them while you build.</p>
+    </header>
+
+    <p class="maxim-lead">“Voids in the past, virtues in the present create values that are <em>pursuable</em> by the people you desire to sell to.”</p>
+
+    <div class="maxim-grid">
+      <blockquote>
+        <p>“Money does grow on trees. But money only grows on <em>money trees.</em>”</p>
+        <footer><span>→ Build a system, not a one-off sale.</span><a class="ts" href="https://youtu.be/vzyMoKSDDx8?t=34" target="_blank" rel="noopener">00:34 ↗</a></footer>
+      </blockquote>
+
+      <blockquote>
+        <p>“Most people would rather have <em>effortless profitability</em> than effortful unprofitability.”</p>
+        <footer><span>→ The goal is a mechanism, not more hustle.</span><a class="ts" href="https://youtu.be/vzyMoKSDDx8?t=476" target="_blank" rel="noopener">07:56 ↗</a></footer>
+      </blockquote>
+
+      <blockquote>
+        <p>“If you plant a tree in a pot, the tree can only grow as big as <em>the pot can hold the roots.</em>”</p>
+        <footer><span>→ Choose a market with room to grow.</span><a class="ts" href="https://youtu.be/vzyMoKSDDx8?t=409" target="_blank" rel="noopener">06:49 ↗</a></footer>
+      </blockquote>
+
+      <blockquote>
+        <p>“Nobody cares about <em>your story.</em>”</p>
+        <footer><span>→ Make the offer about their story.</span><a class="ts" href="https://youtu.be/vzyMoKSDDx8?t=609" target="_blank" rel="noopener">10:09 ↗</a></footer>
+      </blockquote>
+
+      <blockquote>
+        <p>“The only way to solve your problems is by <em>solving somebody else’s.</em>”</p>
+        <footer><span>→ The offer is the bridge between their problem and your solution.</span><a class="ts" href="https://youtu.be/vzyMoKSDDx8?t=1613" target="_blank" rel="noopener">26:53 ↗</a></footer>
+      </blockquote>
+
+      <blockquote>
+        <p>“If you resist down, <em>up resists you.</em>”</p>
+        <footer><span>→ Do the unseen research before you expect visible results.</span><a class="ts" href="https://youtu.be/vzyMoKSDDx8?t=1479" target="_blank" rel="noopener">24:39 ↗</a></footer>
+      </blockquote>
+
+      <blockquote>
+        <p>“Down is dark. Down is dirty. Down is dense. Down is <em>difficult.</em>”</p>
+        <footer><span>→ That is why the root work is the moat.</span><a class="ts" href="https://youtu.be/vzyMoKSDDx8?t=1514" target="_blank" rel="noopener">25:14 ↗</a></footer>
+      </blockquote>
+
+      <blockquote>
+        <p>“The stuff that nobody can see you doing is the stuff that makes people <em>desire to see you do anything.</em>”</p>
+        <footer><span>→ Authority is built off-camera.</span><a class="ts" href="https://youtu.be/vzyMoKSDDx8?t=1848" target="_blank" rel="noopener">30:48 ↗</a></footer>
+      </blockquote>
+
+      <blockquote>
+        <p>“The fruit will <em>always match the root.</em>”</p>
+        <footer><span>→ Your offer can only be as strong as your understanding of the problem.</span><a class="ts" href="https://youtu.be/vzyMoKSDDx8?t=2081" target="_blank" rel="noopener">34:41 ↗</a></footer>
+      </blockquote>
+
+      <blockquote>
+        <p>“I’ve never seen an apple tree eat an apple.”</p>
+        <footer><span>→ The offer exists for the buyer, not the maker.</span><a class="ts" href="https://youtu.be/vzyMoKSDDx8?t=2113" target="_blank" rel="noopener">35:13 ↗</a></footer>
+      </blockquote>
+
+      <blockquote>
+        <p>“Consumption never creates lack. Consumption creates <em>the opportunity for production.</em>”</p>
+        <footer><span>→ Delivery should create the next opportunity.</span><a class="ts" href="https://youtu.be/vzyMoKSDDx8?t=2318" target="_blank" rel="noopener">38:38 ↗</a></footer>
+      </blockquote>
+
+      <blockquote>
+        <p>“The best time to plant a tree, especially a money tree, is 20 years ago. <em>Second best time: today.</em>”</p>
+        <footer><span>→ Start the asset now.</span><a class="ts" href="https://youtu.be/vzyMoKSDDx8?t=2817" target="_blank" rel="noopener">46:57 ↗</a></footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="section position">
+  <div class="wrap">
+    <header class="sec-head">
+      <div class="sec-no">05</div>
+      <div>
+        <p class="eyebrow">Position &amp; proof</p>
+        <h2>Say it in<br>their language.<br>Then prove it.</h2>
+      </div>
+      <p class="sec-deck">The offer has to be legible before it can be desirable. Name the outcome the market already wants, show the mechanism, then let other people’s results do the convincing.</p>
+    </header>
+
+    <figure class="fig wide">
+      <img src="assets/tree-audience.jpg" alt="Whiteboard money tree annotated with audience attraction, lead generation, and personal development">
+      <figcaption>
+        <span>Audience → leads → conversion</span>
+        <a class="ts" href="https://youtu.be/vzyMoKSDDx8?t=2850" target="_blank" rel="noopener">47:30 ↗</a>
+      </figcaption>
+    </figure>
+
+    <div class="pos-grid">
+      <ol class="pos-list">
+        <li>
+          <div>
+            <h3>Name the outcome, not the expertise</h3>
+            <p>“How to Grow a Business Really Successfully” speaks to people who already care about business. “Just Grow a Money Tree” speaks to a universal desire. The frame decides the size of the audience.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Price for the people who can pay</h3>
+            <p>Rich people have problems too, and <q>when somebody clearly articulates their ability to solve a problem for us, we will happily pay them — with zero resistance.</q> The limitation is rarely the market’s appetite; it is whether you have built something they want.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Prove it in public</h3>
+            <p>Connection content earns attention. Conversion content shows the elegant solution. Consensus content — past clients, case studies, borrowed audiences — makes belief safe.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="questions">
+        <p>The three questions that stop people</p>
+        <dl>
+          <div><dt>How much does it cost?</dt><dd>Less than you have the ability to create.</dd></div>
+          <div><dt>How long will it take?</dt><dd>Less time than you have.</dd></div>
+          <div><dt>How hard will it be?</dt><dd>Not as hard as you are strong.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="preflight">
+  <div class="wrap">
+    <header class="sec-head">
+      <div class="sec-no">06</div>
+      <div>
+        <p class="eyebrow">Pre-flight</p>
+        <h2>Before you call it an offer.</h2>
+      </div>
+      <p class="sec-deck">Seven questions to run against the offer before it goes out into the market.</p>
+    </header>
+
+    <ul class="checks checks-wrap">
+      <li><span></span><span>Whose desired outcome is this rooted in — <b>theirs or mine?</b></span></li>
+      <li><span></span><span>Which <b>past void</b> does it name?</span></li>
+      <li><span></span><span>Which <b>present virtue</b> does it promise?</span></li>
+      <li><span></span><span>Which <b>future vision</b> does it serve?</span></li>
+      <li><span></span><span>What is the <b>mechanism</b>, and where does it over-deliver?</span></li>
+      <li><span></span><span>What <b>proof</b> makes it safe to believe?</span></li>
+      <li><span></span><span>Does delivering it create the <b>next opportunity</b>, or just exhaust me?</span></li>
+    </ul>
+
+    <p class="closing">Find what the market already wants, obsess until you can over-deliver it as a repeatable mechanism, prove it in public, and price it like <em>the transformation is real.</em></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <p><b>Source:</b> Myron Golden, “The Real Reason You Stay Stuck Financially” / “Just Grow a Money Tree” (2026) — <a href="https://youtu.be/vzyMoKSDDx8" target="_blank" rel="noopener">youtu.be/vzyMoKSDDx8</a>. Screenshots captured from the video at the timestamps shown.</p>
+      <p>This is an interpretive summary, not a transcript. The talk builds a metaphor for wealth systems; it does not cover tactical offer mechanics such as pricing structure, bonuses, guarantees, or scarcity. Pair this with a tactical framework if you need an end-to-end offer build.</p>
+    </div>
+    <div class="foot-mark">Grow a money tree.<span>Offer field notes · Vol. 01</span></div>
+  </div>
+</footer>
+
+</body>
+</html>
